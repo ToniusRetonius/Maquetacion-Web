@@ -1,0 +1,79 @@
+body{
+    font: italic;
+    color: chocolate;
+    background-color: rgb(10,100,30);
+}
+
+h1{
+    width: 900px;
+    background-color: springgreen;
+    color: teal;
+}
+
+#caja1{
+    /* border: estilo grosor color;  se pueden mezclar >>>*/
+    border: dotted 4px deeppink;
+    font-weight: bold;
+}
+
+#caja2{
+    /* border: estilo grosor color;  se pueden mezclar >>>*/
+    border: deeppink dashed 20px;
+    color: saddlebrown;
+
+    /* el margin: auto me permite que el elemento ocupe el margen disponible */
+}
+
+#caja3{
+    /* padding: separacion interna desde los bordes hasta el contenido; */
+    /* p(numero) >> es un atajo  */
+    padding: 30px;
+    border: dashed 30px coral;
+    color: seagreen;
+}
+
+#caja4{
+    color: slategray;
+    /* w(numero) >> es un atajo */
+    width: 300px;
+    /* h(numero) >> es un atajo */
+    height: 30px;
+    /* en general no especificamos altura y dejamos que se ajuste al device */
+
+    /* border-width: valor1 valor2 valor3 valor4; */
+    /* valor1 == top  */
+    /* valor2 == right */
+    /* valor3 == bottom */
+    /* valor4 == left */
+    border-width: 10px 20px 30px 40px;
+
+}
+
+#caja5{
+    /* padding: valor1 valor2; */
+    /* valor1 == top and bottom */
+    /* valor2 == left and right */
+        /* padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px; */
+    padding: 30px 40px;
+}
+
+#caja6{
+    /* padding: valor1 valor2 valor3 valor4; */
+    /* valor1 == top  */
+    /* valor2 == right */
+    /* valor3 == bottom */
+    /* valor4 == left */
+        /*  padding-top: 30px;
+            padding-right: 40px; 
+            padding-bottom: 30px;
+            padding-left: 40px; 
+        */
+    padding-top: 30px 40px 30px 40px;
+
+    /* box-sizing: */
+    box-sizing: border-box;
+    box-sizing: content-box;
+}

@@ -1,0 +1,80 @@
+body {
+    font-family: Verdana, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table {
+    width: 40em;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #333;
+    padding: .4em;
+}
+
+th {
+    font-weight: normal;
+    font-variant: small-caps;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #222;
+    color: #fff;
+}
+
+thead th:first-of-type {
+    width: 200px;
+}
+
+thead th:nth-of-type(2) {
+    width: 100px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: hsl(170, 62%, 83%);
+}
+
+tbody tr:nth-child(odd):hover {
+    background-color: hsl(170, 62%, 88%);
+}
+
+tbody tr:nth-child(even) {
+    background-color: hsl(210, 62%, 73%);
+}
+
+tbody tr:nth-child(even):hover {
+    background-color: hsl(210, 62%, 78%);
+}
+
+tbody tr:first-child {
+    color: #777;
+}    
+
+tbody td:nth-child(2) {
+    text-align: right;
+}    
+
+tfoot tr {
+    background-color: #444;
+    color: #fff;
+}
+
+tfoot td {
+    text-align: center;
+    font-weight: bold;
+}
+
+.alineado-superior {
+    vertical-align: top;
+}
+
+.moneda {
+    font-size: 3em;
+}
+
+.todo-junto {
+    white-space: nowrap;
+}

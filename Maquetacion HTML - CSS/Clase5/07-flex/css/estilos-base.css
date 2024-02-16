@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* height: 100%; */
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    /* height: 100%; */
+}
+
+.contenedor {
+    background-color: #222;
+}
+
+section {
+    border: .1em solid hsla(200, 70%, 20%, .65);
+    text-align: center;
+}
+
+#seccion1 {
+    background-color: hsla(200, 70%, 40%, .65);
+}
+
+#seccion2 {
+    background-color: hsla(200, 70%, 45%, .65);
+}
+
+#seccion3 {
+    background-color: hsla(200, 70%, 50%, .65);
+}
+
+#seccion4 {
+    background-color: hsla(200, 70%, 55%, .65);
+}
+
+#seccion5 {
+    background-color: hsla(200, 70%, 60%, .65);
+}
+
+#seccion6 {
+    background-color: hsla(200, 70%, 65%, .65);
+}
+
+#seccion7 {
+    background-color: hsla(200, 70%, 70%, .65);
+}
+
+#seccion8 {
+    background-color: hsla(200, 70%, 75%, .65);
+}
+
+#seccion9 {
+    background-color: hsla(200, 70%, 80%, .65);
+}
+
+#seccion10 {
+    background-color: hsla(200, 70%, 85%, .65);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+
+        #caja1 div,
+        #caja2 div {
+            width: 300px;
+            height: 300px;
+            background-color: hsla(120, 50%, 70%, .4);
+            border: 0.2em solid #ad9;
+        }
+        #caja1 {
+            color: red;
+            /* overflow: hidden; */
+        }
+
+        #caja2 {
+            color: yellow;
+        }
+
+        #caja2 div {
+            background-color: orangered;
+        }
+
+        #caja1 div {
+            float: left;
+            margin-right: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #caja2 {
+            clear: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Float</h1>
+    <main>
+        <div id="caja1">
+            <div>Contenido 1</div>
+            <div>Contenido 2</div>
+            <div>Contenido 3</div>
+            <div>Contenido 4</div>
+            <div>Contenido 5</div>
+            <div>Contenido 6</div>
+            <!-- <div style="float: right;">Contenido 3</div> -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, ex magnam! Laudantium similique dicta labore corporis omnis placeat est nostrum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A magnam maxime laudantium impedit iusto autem architecto officiis laborum suscipit. Nesciunt.</p>
+            <p>Ea soluta sequi, quas odio laborum voluptas ratione harum! Assumenda impedit reiciendis veritatis nulla quos natus sed sequi eius expedita!</p>
+            <p>Tenetur excepturi distinctio ducimus natus animi corrupti accusamus possimus recusandae explicabo quas vero voluptates nihil provident eos, ab cum cumque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus exercitationem commodi nostrum accusamus dolor rem quia adipisci officiis porro, consequuntur at, ea nam voluptate nesciunt. Illo possimus quis at minus laboriosam facilis vero tempore similique exercitationem iste voluptas voluptatibus, fugit eius sit aliquam iusto quia facere eum? Voluptatum ut, exercitationem sit, adipisci iusto provident saepe expedita voluptate nobis sequi sint, doloribus iure. Natus debitis doloribus assumenda temporibus! Nobis fugit debitis iusto, dolorem suscipit rerum accusamus doloribus, sint neque nam voluptatibus praesentium excepturi eos repudiandae unde. Quas tenetur minus illum nam tempora sint sit, facere ullam quos quo eius consequatur iste provident, deleniti laborum perferendis aliquam ipsa consectetur fugit nemo magni veniam aliquid ab! Quod tempora explicabo dolor, inventore perspiciatis quaerat ut. Repellat molestiae laboriosam ipsa quidem totam! Enim cum ipsa corrupti magni quo dolorum doloribus, iste impedit quibusdam deserunt quia ipsam minus debitis quidem sint possimus ullam ad unde?</p>
+        </div>
+        <div id="caja2">
+            <div>Contenido 4</div>
+            <div>Contenido 5</div>
+            <div>Contenido 6</div>
+        </div>
+    </main>
+    
+</body>
+</html>

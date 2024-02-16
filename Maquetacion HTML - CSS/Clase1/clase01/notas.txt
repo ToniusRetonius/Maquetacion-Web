@@ -1,0 +1,12 @@
+CSS Cascade Style Sheet
+
+CSS Zen Garden
+http://www.csszengarden.com/
+
+Emmet
+https://docs.emmet.io/abbreviations/syntax/
+https://docs.emmet.io/cheat-sheet/
+
+
+Validador de la W3C
+https://validator.w3.org/nu/#textarea

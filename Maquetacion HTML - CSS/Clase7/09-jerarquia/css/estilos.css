@@ -1,0 +1,88 @@
+/* !important > estilos en línea > #id > .clase > etiqueta */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    border-right: 1em solid green !important;
+    border-left: 1em solid #000 !important;
+}
+
+#mi-parrafo {
+    color: blue;
+    text-align: right;
+    border-right-color: red !important;
+    border-left-color: yellow;
+}
+
+#mi-parrafo {
+    color: cyan;
+}
+
+.destacado {
+    font-weight: bold;
+    color: orangered;
+}
+
+html body #mi-parrafo.destacado {
+    text-align: center;
+}
+
+section {
+    border: .3em solid #39f;
+    padding: .5em;
+}
+
+article {
+    margin-bottom: .8em;
+    border: .2em solid #333;
+    padding: 1em;
+}
+
+p {
+    color:pink;
+}
+
+section article p {
+    color:#d7d7d7;
+}
+
+article p {
+    color: #48a;
+    font-size: 1.4em;
+}
+
+body p {
+    color: green;
+}
+
+p {
+    color: darkmagenta;
+    color: orangered;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    color:teal;
+}
+
+nav a:hover {
+    color: magenta;
+    color: limegreen;
+}
+
+a:hover {
+    text-transform: uppercase;
+    color: yellow;
+}

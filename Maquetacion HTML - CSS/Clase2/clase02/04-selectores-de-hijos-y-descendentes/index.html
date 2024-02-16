@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de hijos y descendentes</title>
+    <style>
+        /* todos los <strong> */
+        strong {
+            color: orangered;
+        }
+
+        /* elementos <strong> DESCENDENTES de <ul> */
+        ul strong {
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        /* elementos <em> DESCENDENTES de <p> */
+        p em {
+            background-color: palegreen;
+        }
+
+        /* elementos <em> HIJOS de <p> */
+        p > em {
+            font-size: 20px;
+        }
+            
+        /* elementos <em> HIJOS de <ul>, o sea, ninguno */
+        ul > em {
+            background-color: black;
+        }
+
+        /* elemento con id #lista-2 */
+        #lista-2 {
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* elemento <ul> HIJO de un elemento con id #lista-2 */
+        #lista-2 > li {
+            background-color: mediumaquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores de <em>hijos y descendentes</em></h1>
+    <p>Lorem ipsum dolor, sit amet <strong>consectetur adipisicing elit</strong>. Commodi ratione tempore, quia dolore optio ducimus. Atque veritatis laudantium ut delectus!</p>
+    <p>Illo corporis ratione ab autem enim at. Ea, perferendis fuga? Labore laborum commodi et fugit sint enim illo! Explicabo, obcaecati.</p>
+    <p>Tenetur itaque sequi sunt? <strong>Vitae illum maiores</strong>, eaque hic qui assumenda nihil modi est ipsa doloremque amet laborum ab odio?</p>
+    <h2>Lista 1</h2>
+    <ul id="lista-1">
+        <li>Lorem ipsum dolor sit <em>amet consectetur adipisicing elit</em>. Sit voluptatum dolorem, officiis quibusdam deleniti officia aliquid hic corporis consectetur ullam voluptatem? Sequi quae minima saepe repudiandae, doloribus neque reiciendis quibusdam.</li>
+        <li>Autem, aspernatur, <strong>libero beatae, dolores</strong> corporis unde labore dolorem voluptas exercitationem modi suscipit expedita assumenda voluptatibus aliquid tenetur! Eveniet laborum omnis porro culpa repellendus dolorum sunt! Rerum odit voluptates minus!</li>
+        <li>Praesentium excepturi obcaecati a placeat accusamus sit quidem neque modi officiis explicabo cumque libero quisquam, totam facilis iusto inventore pariatur quasi incidunt molestiae fugit, laudantium veniam earum dignissimos reiciendis. Consectetur?</li>
+        <li>Suscipit vel ipsa deleniti <strong>ratione hic non</strong> sequi praesentium incidunt error perferendis. Maxime quasi quam tempora, asperiores, quod dicta commodi atque quia eum culpa fugiat beatae dolorem et, accusamus temporibus?</li>
+        <li>Explicabo optio repudiandae nam, ipsum aliquam praesentium cumque ducimus commodi? Nesciunt, vel. Iure quae fuga quibusdam. Ut, dolor nisi porro ea assumenda voluptates hic reiciendis quis inventore dicta, tempora expedita.</li>
+    </ul>
+    <h2>Lista 2</h2>
+    <ul id="lista-2">
+        <li>Lorem ipsum dolor sit <em>amet consectetur adipisicing elit</em>. Sit voluptatum dolorem, officiis quibusdam deleniti officia aliquid hic corporis consectetur ullam voluptatem? Sequi quae minima saepe repudiandae, doloribus neque reiciendis quibusdam.</li>
+        <li>Autem, aspernatur, <strong>libero beatae, dolores</strong> corporis unde labore dolorem voluptas exercitationem modi suscipit expedita assumenda voluptatibus aliquid tenetur! Eveniet laborum omnis porro culpa repellendus dolorum sunt! Rerum odit voluptates minus!</li>
+        <li>Praesentium excepturi obcaecati a placeat accusamus sit quidem neque modi officiis explicabo cumque libero quisquam, totam facilis iusto inventore pariatur quasi incidunt molestiae fugit, laudantium veniam earum dignissimos reiciendis. Consectetur?</li>
+        <li>Suscipit vel ipsa deleniti <strong>ratione hic non</strong> sequi praesentium incidunt error perferendis. Maxime quasi quam tempora, asperiores, quod dicta commodi atque quia eum culpa fugiat beatae dolorem et, accusamus temporibus?</li>
+        <li>Explicabo optio repudiandae nam, ipsum aliquam praesentium cumque ducimus commodi? Nesciunt, vel. Iure quae fuga quibusdam. Ut, dolor nisi porro ea assumenda voluptates hic reiciendis quis inventore dicta, tempora expedita.</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Cumque quasi asperiores quibusdam debitis!</p>
+    <p>Lorem ipsum dolor <em>sit amet consectetur</em> adipisicing elit. Unde error quasi consectetur <em>ex perspiciatis iusto illo</em> repellendus quas rem saepe, hic eius quod ullam corrupti odio ratione consequatur, obcaecati architecto! Nemo fuga est sint aliquid pariatur, <strong>rem cupiditate <em>ipsa quod</em> voluptatum aperiam molestias eveniet officiis vel, soluta tempore doloribus iure</strong>, at minus suscipit dolores. Nam debitis aliquam quod laboriosam sit! Fuga a voluptatibus, magni in ut doloribus quam nam, dolore maxime architecto alias praesentium! Sit, maxime fuga facilis corrupti itaque et excepturi quidem animi, illum ea, impedit voluptas? Temporibus reprehenderit <strong>ea atque, provident voluptates illo <em>voluptate tempore</em> amet dicta eos aperiam rem? </strong> Consectetur, sed aperiam! Veniam necessitatibus dolore quisquam minus rem provident accusantium esse adipisci sint nostrum delectus, corporis labore sunt tempore quod quae ut enim eos autem perferendis, id repudiandae? <em>Quibusdam eius explicabo libero</em> fugit quia eaque veritatis voluptates fugiat et saepe quis dolorem, perspiciatis vitae impedit eligendi corrupti rem ut blanditiis quam praesentium odit! Totam perspiciatis ratione, <em>voluptatum vero provident ea</em> repellendus similique cum corporis dolorem hic iste quasi autem placeat ex consequuntur consequatur accusamus quis aliquid? Nobis mollitia odio quas quos vero autem vel praesentium reiciendis architecto nisi dolores neque, officiis illum, nihil libero in quam quisquam!</p>
+</body>
+</html>

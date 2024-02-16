@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids - Ejemplo 11</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 200px repeat(2, auto);
+            height: 500px;
+        }
+        #item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        #item2 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 8;
+        }
+        #item10 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo 11</h1>
+    <div id="container">
+        <div id="item1">Item 1</div>
+        <div id="item2">Item 2</div>
+        <div id="item3">Item 3</div>
+        <div id="item4">Item 4</div>
+        <div id="item5">Item 5</div>
+        <div id="item6">Item 6</div>
+        <div id="item7">Item 7</div>
+        <div id="item8">Item 8</div>
+        <div id="item9">Item 9</div>
+        <div id="item10">Item 10</div>
+    </div>
+</body>
+</html>

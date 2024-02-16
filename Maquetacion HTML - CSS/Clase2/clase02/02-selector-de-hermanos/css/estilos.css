@@ -1,0 +1,50 @@
+/* selector de etiqueta */
+body {
+    background-color: peachpuff;
+}
+
+/* selector de grupo */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+h2 {
+    background-color: saddlebrown;
+    color: lightgoldenrodyellow;
+}
+
+h3 {
+    background-color: midnightblue;
+    color: lightcyan;
+}
+
+/* selector de hermano adyacente */
+
+/* todos los <p> */
+p {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/* <p> que sean hermanos adyacentes de <h2> */
+h2 + p {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* <p> que sean hermanos de <h3> */
+h3 ~ p {
+    color: red;
+}
+
+/* Cualquier elemento que sea hermanos adyacentes de <ul> */
+ul + * {
+    text-align: center;
+    color: yellow;
+    font-size: 30px;
+}
+

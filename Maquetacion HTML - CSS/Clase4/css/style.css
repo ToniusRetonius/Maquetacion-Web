@@ -1,0 +1,11 @@
+/* En el css usamos el IMPORT */
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap'); */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: large;
+}

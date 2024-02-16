@@ -1,0 +1,31 @@
+CSS Cascade Style Sheet
+
+CSS Zen Garden
+
+http://www.csszengarden.com/
+
+Emmet
+
+https://docs.emmet.io/abbreviations/syntax/
+https://docs.emmet.io/cheat-sheet/
+
+https://css3generator.com/
+
+
+
+
+<!-- Para realizar un comentario en HTML marco CONTROL + K + U  -->
+
+<!-- CONTROL + AL + I  para hacer el incremento de numeros seleccionados con CONTROL + D -->
+
+<!-- ALT + SHIFT + flecha para copiar lo mismo hacia donde apunte la flecha -->
+
+<!-- Para mover la linea de codigo utilizo ALT + flecha -->
+
+<!-- CONTROL + BARRA me tira recomendaciones  -->
+
+<!-- CONTROL + SHIFT + FLECHA puedo seleccionar codigo -->
+
+<!--- LIVE SERVER ALT + L : Live (Server) ALT + O : Open -->
+
+СONTROL + SHIFT + P >> para obtener comandos, y con la extension Random Everything... es clave

@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'Mi tipografia';
+    src: url('Roboto-Regular.ttf');
+}
+@font-face{
+    font-family: 'Mi tipografia italica';
+    src: url('Roboto-Italic.ttf');
+    font-style: italic;
+}
+@font-face{
+    font-family: 'Mi tipografia negrita';
+    src: url('Roboto-Bold.ttf');
+    font-style: bold;
+}
+@font-face{
+    font-family: 'Mi tipografia mixta';
+    src: url('Roboto-Bolditalic.ttf');
+    font-style: bold;
+    font-style: italic;
+}
+
+
+body { 
+    background-color: #ecf;
+}
+
+p{
+    font-family: 'Mi tipografia', sans-serif;
+}

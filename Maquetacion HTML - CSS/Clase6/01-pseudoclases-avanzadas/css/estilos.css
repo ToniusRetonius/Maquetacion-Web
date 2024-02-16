@@ -1,0 +1,80 @@
+section {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    margin-bottom: 4em;
+}
+
+
+/* Primer hijo (de cualquier tipo) dentro de section (sea o no hijo de section, pero que sea un primer hijo) */
+section :first-child {
+    color: yellow;
+}
+
+/* Primer hijo (de cualquier tipo) dentro de section */
+section > :first-child {
+    border: 1px solid red;
+}
+
+/* Primer hijo, siempre y cuando sea un párrafo */
+p:first-child {
+    text-decoration: underline;
+}
+
+/* Último hijo, siempre y cuando sea un párrafo */
+p:last-child {
+    background-color: #121212;
+    padding: .4em;
+}
+
+/* Primer párrafo dentro de un contenedor */
+p:first-of-type {
+    font-family: Verdana, sans-serif;
+}
+
+/* Último párrafo dentro de un contenedor */
+p:last-of-type {
+    border-right: 2em solid green;
+}
+
+/* Cuarto elemento li */
+li:nth-child(4) {
+    color: orangered;
+}
+
+/* Penúltimo elmento li (el 2do de abajo para arriba) */
+li:nth-last-child(2) {
+    color: cyan;
+}
+
+/* Elementos li impares */
+li:nth-child(odd) {
+    background-color: #102030;
+}
+
+/* Elementos li pares */
+li:nth-child(even) {
+    background-color: #203040;
+}
+
+/* 3er párrafo dentro de un section */
+section p:nth-of-type(3) {
+    background-color: rebeccapurple;
+    padding: .5em;
+}
+
+/* Penúltimo strong dentro de section */
+section strong:nth-last-of-type(2) {
+    font-size: 2em;
+}
+
+/* primer li dentro de un contenedor */
+li:first-of-type {
+    text-align: right;
+}
+
+/* 3er li dentro de un contenedor */
+li:nth-of-type(3) {
+    text-align: center;
+}
+

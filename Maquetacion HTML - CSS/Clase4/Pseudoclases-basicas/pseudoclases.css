@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+    margin: 20px auto;
+}
+
+h1{
+    background-color: #223412;
+    color: azure;
+    padding-top: 30px;
+    text-decoration: underline;
+}
+
+main{
+    background-color: lavenderblush;
+}
+ 
+p{
+    margin: 15px 0;
+}
+
+a{
+    text-decoration: none;
+    
+
+}
+
+/* 
+ORDEN RECOMENDADO PARA <a>
+-a
+-a:link
+-a:hover
+-a:focus
+-a:active
+*/
+
+a {
+    font-weight: bold;
+}
+
+/* <a> mientras se les pase el cursor por encima*/
+a:hover{
+    color: lightseagreen;
+}
+
+/*   */
+a:focus{
+    background-color: #fff;
+}
+
+/* <a> no visitados cuando esten siendo presionados */
+a:active{
+    color: lawngreen;
+}
+
+/* <a> visitados */
+a:visited{
+    color: lemonchiffon;
+}
+
+
+/* <a> visitados a los que se les pase el cursor por encima */
+a:visited:hover{
+    font-weight: bold;
+}
+
+/* <a> visitados cuando se los presione */
+a:visited:active{
+    color: maroon;
+}
+

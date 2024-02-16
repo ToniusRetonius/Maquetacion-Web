@@ -1,0 +1,160 @@
+// Variables LESS
+
+@color: #448;
+@bg-color: #ccc;
+@r: .25rem;
+
+@path: '..assets/bg'
+/* 
+@bg_day: ;
+@bg_night: ;
+  */
+
+
+// Nesting : anidacion de selectores;
+#header{
+    .col-12;
+    .flexbox(column);
+    .position;
+    .normalize(@p: 1rem);
+    height: min(100vh, 640px);
+    .header{
+        .normalize(auto, .25rem);
+        *{&:extend(.unstyled);}
+        /* para que LESS no lo interprete usamos ~'' (string literal)*/
+        font-size: ~'min(calc(2vw + .5rem), 3rem)';
+        text-align: center;
+        position: relative;
+        color: lighten(@bg-color, 20%);
+        text-shadow: 0 0 calc(1vw + .5rem) darken(@color, 10%);
+    }
+
+    .controls{
+        .flexbox;
+        span{
+            .normalize(.25rem);
+            width: 2rem;
+            height: 2rem;
+            border-radius: .5rem;
+            border-color: #eee;
+            box-shadow: 0 .25rem .5rem #eee;
+            transition: all 1s ease-out;
+            &.active{ width: 3rem;}
+        }
+    }
+
+    .slide{
+        &:extend(.unstyled);
+        &:extend(.cover);
+        li{
+            &:extend(.cover);
+            background: var(--bg) center/cover;
+            opacity: 0;
+            transition: all 5s ease-in;
+            .bg(@bg_day);
+            &.active { opacity: 1; } 
+        }
+    }
+    
+    .button{
+        .normalize(@p: 1rem);
+        background-color: transparent;
+        .position(absolute; @p2: bottom);
+        &.icon-prev{left: 0;};
+        &.icon-next{right: 0;};
+        font-size: calc(1vw + 1rem)
+    }
+
+    .dark{
+        .slide li{
+            .bg(@bg_night);
+        }
+    }
+}
+// con este metodo de less extiendo estilos a otros elementos
+// &:extend(.normalize);
+// vamos a aclarar un color en un porcentaje
+// color: lighten(@color, 15%);
+
+// Mixin : estilos que se utilizan como atributos;
+
+
+.unstyled{ 
+    list-style: none;
+    .normalize;
+}
+
+.rounded{
+    border-radius: @r;
+    -webkit-border-radius: @r;
+    -moz-border-radius: @r;
+    -o-border-radius: @r ;
+    -ms-border-radius: @r;
+}
+
+.cover{
+    .position(absolute; @z: -1);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+// Mixin Parametrico: recibe parametros al igual que una funcion 
+
+.normalize(@m:0; @p:0; @b:0){
+    margin: @m;
+    padding: @p;
+    border: @b;
+}
+.flexbox(
+    @fd:row;
+    @fj: center;
+    @fa: stretch;
+    @fw: wrap;
+    @f:flex;){
+    display: @d;
+    flex-direction: @fd;
+    justify-content: @fj;
+    align-items: @fa;
+    flex-wrap: @fw;
+}
+
+.position(
+    @p: relative; 
+    @x: 0;
+    @y: 0;
+    @z: 0;
+    @p1: top;
+    @p2: left;
+    ){
+        position: @p;
+        // para asignar una variable como atributo
+        @{p1}: @y;
+        @{p2}: @x;
+    }
+
+// Mixin recursivo :  es un estilo que se repite en base a una condicion  (bucle == do while)
+
+.size (@i:1) when (@i <= 5){
+    width: @i * 5px;
+    .size(@i + 1);
+}
+// utilizo un array como argumento
+.bg(@array; @i:1) when (@i <= length(@array)){
+    @bg: extract(@array, @i);
+    &:nth-child(@{i}){
+        --bg: url('@{path}/@{bg}');
+    }
+    .bg(@array; @i + 1);
+
+}
+
+/*  Sistema de grillas (flexbox) */
+.grid(@i: 1) when (@i <= @col){
+    .col-@{i}{
+        width: percentage((@i / @col));
+    }
+    .grid(@1 + 1);
+}
+
+.grid;

@@ -1,0 +1,31 @@
+/* SELECTORES DE ID */
+
+#parrafo1{
+    text-align: unset;
+    /* para tachar */
+    text-decoration: line-through;
+}
+
+#parrafo2{
+    color: teal;
+    text-transform: uppercase;
+}
+
+/* SELECTORES DE CLASE */
+
+.destacado{
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Elementos DESCENDENTES */
+p em {
+  background-color: turquoise;
+}
+
+/* Elementos hijos */
+
+ul > li {
+    font-family: serif;
+    display: unset;
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 2em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.5em;
+    text-align: center;
+    padding: 1.5em;
+    color: #eb683c;
+    background-color: #624;
+    font-weight: 100;
+}
+
+section {
+    color: #fff;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 2em;
+}
+
+#seccion1 {
+    background-image: url("img/skyline.jpg");
+}
+
+#seccion2 {
+    background-image: url("img/girasoles.jpg");
+    background-attachment: scroll;
+}
+#seccion3 {
+    background-image: url("img/bosque.jpg");
+}
+
+#seccion4 {
+    color: #24437a;
+}
+
+#seccion5 {
+    background-image: url("img/nebulosa.jpg");
+}
+
+#seccion6 {
+    color: #8c5984;
+}
+
+#seccion7 {
+    background-color: #140a26;
+}
+
+
+section div {
+    width: 37.5em;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 4.5rem;
+    font-weight: 200;
+}
+
+section p {
+    font-size: 1.4rem;
+    /* font-weight: 700; */
+}

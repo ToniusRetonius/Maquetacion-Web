@@ -1,0 +1,249 @@
+/*Content First - Mobile First*/
+	/*Imports*/
+		@import url('icomoon.css');
+		@import url('less.css');
+		@import url('sass.css');
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
+	/*General Rules*/
+		:root{
+			--first:  #48e;
+			--second: #e8c;
+			--light:  #eee;
+			--dark:   #333;
+			--hover:  rgba(51, 51, 51, .5);
+			--font:   'Raleway', 'calibri', 'segoe ui', sans-serif;
+		}
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
+		}
+		body,
+		h1,
+		h2,
+		h3,
+		.menu{
+			margin: 0;
+		}
+		.opacity{ opacity: .3; }
+		.opacity:hover{ opacity: .7; }
+	/*Navigation*/
+		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: var(--first) linear-gradient(var(--second), var(--first));
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+			text-shadow: 0 0 .5rem var(--dark);/* x y blur color*/
+		}
+		.menu{
+			width: 100%;
+			max-height: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+			transition: all .5s ease-out;
+		}
+		.menu.active{ max-height: 600px; }
+		.menu span{ padding: .5rem;	}
+		.menu a:hover{ background-color: var(--hover); }
+		.icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			border-radius: 50%;
+			background-color: var(--dark);
+		}
+	/*Contenido Principal*/
+		main, section{
+			padding: 1rem;
+		}
+		section{
+			margin: 1rem auto;
+			border-radius: .25rem;
+			box-shadow: 0 0 .5rem var(--dark);
+		}
+		.example{
+			display: flex;
+			flex-wrap: wrap;
+			margin: .5rem;
+			border-left: .2rem solid var(--first);
+			padding: 1rem;
+			line-height: 1.5rem;
+			list-style: none;
+			background-color: var(--light);
+		}
+		.example div{
+			padding: .5rem;
+		}
+		.less div{
+			border: .1rem dashed var(--dark);
+		}
+		/*Transformaciones*/
+			.transform{
+				perspective: 200px;
+				perspective-origin: center;
+			}
+			.transform div{
+				margin: .25rem;
+				border: .2rem dotted var(--dark);
+				background-color: var(--second);
+				min-width: 15rem;
+				transition: all 1s ease;
+			}
+			.transform div:nth-child(1n):hover{ transform: scale(1.5); }
+			.transform div:nth-child(2n):hover{ transform: translate(1rem,-1rem);}
+			.transform div:nth-child(3n):hover{ transform: rotate(45deg); }
+			.transform div:nth-child(4n):hover{ transform: skewX(45deg); }
+			.transform div:nth-child(5n):hover{ transform: skewY(-15deg) }
+			.transform div:nth-child(6n):hover{ transform: rotateX(30deg) }
+			.transform div:nth-child(7n):hover{ transform: rotateY(-45deg) }
+			.transform div:nth-child(8n):hover{ transform: translateZ(5rem); }
+		/*Animaciones*/
+			#header{ overflow: hidden }
+			#header h1{
+				animation-name: appear;
+				animation-duration: 3s;
+				animation-timing-function: ease-out;
+				animation-delay: 1s;
+				animation-fill-mode: backwards;
+			}
+			@keyframes appear{ 
+				from{ 
+					transform: 
+						translateZ(20rem) 
+						rotateX(30deg); 
+			} 	}
+			/*Ejemplos*/
+				.animation{
+					display: grid;
+					justify-content: center;
+				}
+				.animation div{
+					margin: .25rem;
+					border: .1rem solid var(--dark);
+					padding: .5rem;
+					animation: moveIt 3s infinite;/*name duration timing delay i-count*/
+				}
+				@keyframes moveIt{
+					from{
+						transform: translate(-20vw);
+						background-color: var(--first);
+					}
+					to{
+						transform: translate(20vw);
+						background-color: var(--second);
+				}	}
+			/*Timing Function*/
+				.timing :nth-child(1){ animation-timing-function: ease; }
+				.timing :nth-child(2){ animation-timing-function: ease-in; }
+				.timing :nth-child(3){ animation-timing-function: ease-out; }
+				.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+				.timing :nth-child(5){ animation-timing-function: linear; }
+				.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+			/*Direction*/
+				.direction :nth-child(1){ animation-direction: normal; }
+				.direction :nth-child(2){ animation-direction: reverse; }
+				.direction :nth-child(3){ animation-direction: alternate; }
+				.direction :nth-child(4){ animation-direction: alternate-reverse; }
+			/*Progression*/
+				.progression{
+					align-items: flex-start;
+					position: relative;
+					min-height: 300px;
+				}
+				.progression div{
+					min-width: 10rem;
+					min-height: 5rem;
+					border: .2rem solid var(--light);
+					padding: .5rem;
+					animation: advance 5s linear .5s infinite;
+					animation-play-state: paused;
+				}
+				.progression button{
+					position: absolute;
+					right: .5rem;
+					bottom: .5rem;
+				}
+				@keyframes advance{
+					0%{
+						transform: translate(0,0) skew(15deg,0);
+						background-color: hsl(0,50%,50%);
+					}
+					25%{
+						transform: translate(60vw,0) skew(0, 15deg);
+						background-color: hsl(90,50%,50%);
+					}
+					50%{
+						transform: translate(60vw, 200px) skew(-15deg, 0);
+						background-color: hsl(180,50%,50%);
+					}
+					75%{
+						transform: translate(0, 200px) skew(0,-15deg);
+						background-color: hsl(270,50%,50%);
+					}
+					100%{
+						transform: translate(0,0) skew(15deg,0);
+						background-color: hsl(0,50%,50%);
+				}	}
+		/*Video de Fondo*/
+			.bg-vid{ 
+				position: relative;
+				padding-top: min(55%, 627px);
+				overflow: hidden;
+				color: var(--light);
+			}
+			.bg-vid h2{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+			}
+			.bg-vid video{
+				background-color: black;
+			}
+			.bg-vid .btn{
+				position: absolute;
+				bottom: .5rem;
+				right: .5rem;
+			}
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+	@media screen and (min-width: 768px){
+		nav .btn,
+		.menu span{ display: none; }
+		.menu, 
+		.menu a{
+			display: flex;
+			align-items: center;
+			width: auto;
+			max-height: 600px;
+			font-size: 1.2rem;
+		}
+	}
+/*Large Devices - Desktop*/
+	@media screen and (min-width: 992px){
+		.menu span{
+			display: block;
+			font-size: 1rem;
+		}
+	}
+/*ExtraLarge Devices - HD Desktop*/
+	@media screen and (min-width: 1200px){
+		nav{
+			justify-content: space-around;
+		}
+	}

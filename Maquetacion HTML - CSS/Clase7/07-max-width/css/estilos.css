@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: red;
+    color: #fff;
+    padding: .3em;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        background-color: orange;
+        text-decoration: underline;
+    }
+
+
+    p {
+        color: olivedrab;
+    }
+
+}
+
+@media (max-width: 595px) {
+    h1 {
+        background-color: yellow;
+    }
+}
+
+@media (max-width: 425px) {
+    p {
+        text-align: left;
+    }
+    h1 {
+        background-color: pink;
+    }
+}

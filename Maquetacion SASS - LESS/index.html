@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- toma la codificacion de los simbolos del idioma -->
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- responsive -->
+    <!-- viewport es la ventana del navegador: donde se ve la pagina -->
+    <!-- initial-scale que no tenga zoom out y que empieze con esa escala inicial  -->
+    <!-- maximum-scale limita agrandar el zoom -->
+    
+    <meta 
+        name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0,
+        maximum-scale=3">
+
+    <title>Maquetado Avanzado</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- NAVEGACION : links mas importantes  -->
+    <!--  nav>a.logo{CSS}+button.btn+ul.menu>li*4>a{Link $} -->
+    <!-- .texto : class ; {texto} ; -->
+    <nav>
+        <a href="" class="logo">CSS</a><button class="btn">&equiv;</button>
+        <button class="btn"> + </button>
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a><span class="light">Modo</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- CABECERA : contenido introductorio -->
+
+    <header id="header">
+        <div class="header">
+            <h1>Maquetado Avanzado</h1>
+            <p>sass | less</p>
+            <div class="controls">
+                <span></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="slide">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button class="icon-prev">&lt;</button>
+        <button class="icon-next">&gt;</button>
+    </header>
+    <!-- 
+        <<< EMMET >>>
+
+        padre > hijo
+        header > h1
+
+        el + hermano
+        header + main
+
+        (header>h1) + (main>section)
+        
+        p{texto}
+
+        a[atributos]
+     -->
+
+    <!-- CONTENIDO : Relevante para el usuario -->
+
+    <main class="container">
+        <section>
+            <header class="header">
+                <h2>Caracteristicas HTML5</h2>
+                <p>Nuevos elementos del standard</p>
+            </header>
+            <p>
+                con el surgimiento del nuevo standard, se incorporaron nuevas etiquetas que facilitarion a los desarrolladores la implementacion de estadisticas, contenido multimedia e incluso API's de dibujo. 
+
+                Si bien la mayoria de los navegadores actuales soporta dichas Caracteristicas, debemos tener en cuenta que todavia existen algunos que no y por ende, nuestro dise;o debe contemplar dichas situaciones.
+
+                Por eso podemos consultar en sitios como <a href="https://caniuse.com/">CAN I USE</a> donde nos mostrara una lista dde compatibilidad de elementos.
+            </p>
+            <article>
+                <h3>Elementos estadisticos</h3>
+                <p>
+                    Cada vez que necesitemos comparar valores o evaluar una situacion especifica podemos utilizar 2 etiquetas:
+
+                    <strong> &lt;progress</strong> que debe implementarse cuando estamos llevando a cabo una tarea que aun no fue finalizada, ya que se utiliza para medir el avance dentro de la misma, <em> ej: el progreso de la capacitacion</em>
+                    
+                    <strong>&lt;meter</strong> que debe implementarse cuando la tarea fue finalizada y debemos establecer una comparacion de valores, <em>ej: el resultado de un examen</em>
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>Progress</strong>
+                        <ul>
+                            <li>
+                                <progress></progress>
+                                <span>value = undefined</span>
+                            </li>
+                            <li>
+                                <progress value="20" max="100"></progress>
+                                <span>estatico == value=20 max=100</span>
+                            </li>
+                            <li class="progress">
+                                <progress max="100"></progress>
+                                <input type="number" min="0" max="100">
+                                <span> value = JavaScript</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Meter</strong>
+                        <ul>
+                            <li>
+                                <meter value="30" low="40" high="70" optimum="90" max="100"></meter>
+                                <!-- el optimum define el sentido de los colores rojo-amarillo-verde -->
+                                <span><strong>value</strong> < low < high < optimum</span>
+                            </li>
+                            <li>
+                                <meter value="60" low="40" high="70" optimum="90" max="100"></meter>
+                                <span>low <strong>value</strong> < high < optimum</span>
+                            </li>
+                            <li>
+                                <meter value="90" low="40" high="70" optimum="90" max="100"></meter>
+                                <span>low < high < <strong>value</strong> optimum</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>API's de dibujo</h3>
+                <p>
+                    Actualmente disponemos de dos herramientas para dibujar dentro de nuestro HTML, por un lado <strong>&lt; SVG </strong> (Scalable Vector Graphics) que utiliza como el lenguaje base <em>XML</em> y permite la creacion de graficos vectoriales mediante la implementacion de lineas y curvas.
+
+                    Por otro lado,  existe <strong>CANVAS</strong> (lienzo) que utiliza como lenguaje base <em>JavaScript</em> y permite la creacion de graficos pixelares o tambien conocidos como mapa de bits. 
+
+                    Si bien ambas herramientas nos permiten realizar graficos dentro de nuestro sitio, tambien podemos editar graficos existentes.
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>SVG </strong>
+                        <!-- carecen de profundida de campo -->
+                        <svg width="300" height="300" style="border: solid #333;">
+                            <!-- dibujo un rectangulo con RECT -->
+                            <rect
+                            x="10" y="10" 
+                            width="100" height="100"
+                            fill="hsl(240, 50%, 30%)"
+                            stroke=""
+                            />
+                            <!-- r es el radio, cx y cy son las coordenadas del centro del circulo -->
+                            <circle
+                                r="50" cx="150" cy="150"
+                                fill="hsla(0, 50%, 50%, .4)" stroke=""
+                            />
+                            <!-- con points defino las coordenadas de los vertices -->
+                            <polygon 
+                                points="150,50 150,150 225,100"
+                                fill="hsla(120, 50%, 50%, .5)"
+                                stroke=""
+                                stroke-width=""
+                            />
+
+                            <text
+                                x="25" y ="250"
+                                style="font: bold calibri;"
+
+                            >
+                                SCALABLE VECTOR GRAPHICS
+                            </text>
+
+                        </svg>
+                    </li>
+                    <li>
+                        <strong>Canvas</strong>
+                        <!-- se pixela  -->
+                        <canvas id="canvas" width="300" height="300" style="border: solid #333;"></canvas>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <header class="header">
+                <h2>preprocesadores CSS</h2>
+                <p>Pseudolenguajes de CSS</p>
+                <P>
+                    Los Pseudolenguajes son herramientas que utilizan una sintaxis particular. Toman como base el lenguaje de hojas de estilos. Permiten la implementacion de todos los metodos y Caracteristicas que existen en CSS, pero ademas agrega algunas funcionalidades extra; para utilizarlos debemos crear un archivo con el formato del preprocesador que vayamos a utilizar y luego generamos la hoja de estilos resultante mediante el uso de un compilador, es decir, un interprete de las instrucciones previamente escritas en el codigo que las convierte a un archivo CSS convencional.
+                </P>
+                <article>
+                    <h3>LESS (Leaner Style Sheets)</h3>
+                    <p>
+                        Preprocesador que utiliza JavaScript como lenguaje compilador. Tambien implementa varias caracteristicas del lenguaje como la asincronicidad. Para instalarlo debemos utilizar el siguiente comando con NodeJs <em>npm install -g (global) less</em> y una vez creada la hoja de estilos la compilamos con el siguiente comando <em>lessc 'input.less' 'output.less'</em>
+                    </p>
+                    <p>
+                        Lamentablemente el preprocesado no posee un metodo de observacion, pero para ello podemos instalar otro paquete llamado <strong>Less Watch Compiler</strong> utilizando el comando con NodeJs <em>npm install -g less-watch-compiler</em> y para compilar y observar los cambios para actualizar las hojas de estilo utilizamos el comando <em>less-watch-compiler 'input/' 'output/' 'input.less'</em> 
+                    </p>
+                    <article>
+                        <h3>SASS (Syntactically Awesome Style Sheets)</h3>
+                        <p>
+                            Preprocesador que utiliza RUBY como lemguaje compilador. A diferencia de LESS, todos sus metodos deben estar declarado en orden; ya que de lo contrario arrojara un error de compilacion, pero posee algunas caracteristicas automatizadas: como la generacion de bucles de distinto tipo o la distincion de metodos. 
+                        </p>
+                        <p>
+                            Para su instalacion debemos ejecutar el comando de NodeJs <em>npm install -g sass</em> y para compilar nuestros archivos de manera automatizada simplemente debemos ingresar el comando <em>sass --watch input.scss</em>, cabe destacar que este preprocesador posee dos tipos de sintaxis : SASS (formato original - sin scope) y SCSS (revision con implementacion de signos)
+                        </p>
+                        <div class="example sass">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </article>
+                </article>
+            </header>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Efectos Visuales</h2>
+                <p>Disenando con CSS</p>
+            </header>
+            <p>
+                Actualmente, CSS nos permite utilizar reglas cuyo funcionamiento es similar al de los programas de diseno de Adobe como Photoshop, Illustrator o Animate; pero utilizando solamente codigo del lenguaje. Esto se debe a que toma la sintaxis que genera dichos programas para generar las reglas pertinentes. A diferencia de los atributos clasicos, estos no solamente afectan a la etiqueta seleccionada, sino que tambien afectan su contenido.
+            </p>
+            <article>
+                <h3>Transformaciones</h3>
+                <p>
+                    Cada etiqueta posee puntos de ajuste quepueden ser modificados gracias al atributos <strong>transform</strong>, el cual permite entre otras cosas, cambiar las dimensiones, desplazar la etiqueta, rotarla o sesgarla, sin afectar el flow. Podemos combinar estos efectos con otro atributo conocido como <strong>transition</strong> que permite generar los estados intermedios cuando se realiza un cambio en determinados atributos, como por ejemplo un <em>:hover</em>.
+                </p>
+                <div class="example transform"></div>
+                    <div>Transform: translate (x,y)</div>
+                    <div>Transform: scale (units)</div>
+                    <div>Transform: rotate (degree)</div>
+                    <div>Transform: skew(x,y)</div>
+                    <div>Transform: skew(x,y)</div>
+                    <div>Transform: rotateX (degree)</div>
+                    <div>Transform: rotateY(degree)</div>
+                    <div>Transform: TranslateZ(degree)</div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="map">
+            <!-- inserte mapa aqui -->
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069937068754!2d-58.378124784770385!3d-34.6023929804599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1636062001170!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <button class="icon-max"></button>
+        </div>
+
+        <form action="" id="contact">
+            <h2>Dejanos tu consulta</h2>
+
+            <label for="contactName">Ingrese su nombre</label>
+            <input 
+            id="contactName" 
+            type="text" 
+            name="contactName" 
+            maxlength="50"
+            pattern="[A-Z a-z"]{3,50}"
+            placeholder="Nombre(*): Cristian Racedo"
+            required>
+            <div class="valid">
+                Ingrese su nombre solamente con letras y espacio. Entre 3 y 50 caracteres.
+            </div>
+
+            <label for="contactEmail">Ingrese su correo</label>
+            <input 
+            id="contactEmail" 
+            type="email" 
+            name="contactEmail" 
+            minlength="8" 
+            placeholder="Correo(*) cristian.r@hotmail.com:" 
+            required>
+            <div class="valid">
+                Ingrese su correo respetando la siguiente estructura "usuario@servidor.com" (minimo 8 caracteres)
+            </div>
+
+            <label for="contactPhone">Ingrese su </label>
+            <input 
+            id="contactPhone" 
+            name="contactPhone" 
+            type="tel" 
+            placeholder="Telefono(*): (54 9 11) 0293-3456"
+            pattern="([0-9]){6,20} |([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+            required>
+            <!-- pattern=" 
+                    () separa terminos
+                    [] caracteres permitidos
+                    {} cantidad
+                    - separa desde/hasta
+                "  --> 
+            <div class="valid">
+                Ingrese su numero como se muestra en el ejemplo (separando con guion cada 3 a 6 digitos. Tambien puede solamente ingresar numeros)
+            </div>
+
+            <label for="contactConsult">Ingrese su consulta</label>
+            <textarea 
+            name="contactConsult" 
+            id="contactConsult" 
+            cols="30" 
+            rows="10" 
+            minlength="10" 
+            maxlength="200"
+            placeholder="Consulta(*): Buenas, necesito un presupuesto"
+            required></textarea>
+
+            <button class="btn">Enviar</button>
+        </form>
+        <div class="social">
+            <a href="https://instagram.com" class="instagram" target="_blank"></a>
+            <a href="https://facebook.com" class="facebook" target="_blank"></a>
+            <a href="https://linkedin.com" class="linkedin" target="_blank"></a>
+            <a href="https://github.com/" class="github" target="_blank"></a>
+        </div>
+        <p class="copy">&copy; Todos los derechos reservados</p>
+    </footer>
+    <!-- el JavaScript al final -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

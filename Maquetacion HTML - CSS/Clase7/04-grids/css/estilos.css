@@ -1,0 +1,47 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    background-color: #ddd;
+}
+
+#item1 {
+    background-color: hsla(90, 55%, 95%, .8);
+}
+
+#item2 {
+    background-color: hsla(90, 55%, 85%, .8);
+}
+
+#item3 {
+    background-color: hsla(90, 55%, 75%, .8);
+}
+
+#item4 {
+    background-color: hsla(90, 55%, 65%, .8);
+}
+
+#item5 {
+    background-color: hsla(90, 55%, 55%, .8);
+}
+
+#item6 {
+    background-color: hsla(90, 55%, 45%, .8);
+}
+
+#item7 {
+    background-color: hsla(90, 55%, 35%, .8);
+}
+
+#item8 {
+    background-color: hsla(90, 55%, 25%, .8);
+}
+
+#item9 {
+    background-color: hsla(90, 55%, 15%, .8);
+}
+
+#item10 {
+    background-color: hsla(90, 55%, 5%, .8);
+}
